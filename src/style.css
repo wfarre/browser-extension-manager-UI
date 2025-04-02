@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* base colors */
+  --color-cneutral-900: hsl(227, 75%, 14%);
+  --color-cneutral-800: hsl(226, 25%, 17%);
+  --color-cneutral-700: hsl(225, 23%, 24%);
+  --color-cneutral-600: hsl(226, 11%, 37%);
+  --color-cneutral-300: hsl(0, 0%, 78%);
+  --color-cneutral-200: hsl(217, 61%, 90%);
+  --color-cneutral-100: hsl(0, 0%, 93%);
+  --color-cneutral-0: hsl(200, 60%, 99%);
+
+  --color-cred-400: hsl(3, 86%, 64%);
+  --color-cred-500: hsl(3, 71%, 56%);
+  --color-cred-700: hsl(3, 77%, 44%);
+
+  /* gradient background color */
+  --color-bg-start: #ebf2fc;
+  --color-bg-end: #eef8f9;
+
+  /* custom colors */
+  --color-component-bg: hsl(200, 60%, 99%);
+  --color-text-main: hsl(226, 11%, 37%);
+  --color-text-title: hsl(227, 75%, 14%);
+  --color-btn-bg: hsl(200, 60%, 99%);
+  --color-toggle-bg: hsl(3, 77%, 44%);
+}
+
+.dark {
+  /* grdient background colors */
+  --color-bg-start: #040918;
+  --color-bg-end: #091540;
+
+  /* custom colors */
+  --color-component-bg: hsl(226, 25%, 17%);
+  --color-btn-bg: hsl(225, 23%, 24%);
+  --color-toggle-bg: hsl(3, 86%, 64%);
+  --color-text-main: hsl(0, 0%, 78%);
+  --color-text-title: hsl(0, 0%, 93%);
+}
