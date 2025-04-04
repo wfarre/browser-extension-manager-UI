@@ -1,8 +1,8 @@
 <template>
   <header
-    class="bg-component-bg mx-4 flex justify-between rounded-2xl p-3 md:p-4 lg:mx-32"
+    class="bg-component-bg mx-4 flex items-center justify-between rounded-2xl p-3 md:p-4 lg:mx-32"
   >
-    <img :src="logo" height="45" alt="extensions list logo" />
+    <img :src="logo" class="h-10" alt="extensions list logo" />
     <button
       @click="store.toggleDarkTheme"
       class="bg-btn-bg outline-toggle-bg cursor-pointer rounded-2xl p-4 hover:opacity-60"
