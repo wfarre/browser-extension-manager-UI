@@ -25,7 +25,7 @@ const filteredExtensions = computed(() => {
 
 <template>
   <div
-    class="from-bg-start bg-bg-end text-text-main font-main bg-linear-to-b transition-all duration-800"
+    class="from-bg-start bg-bg-end text-text-main bg-linear-to-b transition-all duration-800"
     :class="`${themeStore.isDarkTheme ? 'dark' : ''}`"
   >
     <div class="mx-auto min-h-[100vh] max-w-[1440px] pt-8">
