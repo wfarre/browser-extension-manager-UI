@@ -19,7 +19,7 @@ const alt = computed(() => `${props.title}'s logo`);
       <img :src="imagePath" height="60" width="60" :alt="alt" lazy />
       <div>
         <h2 class="text-text-title mb-3 text-xl font-bold">{{ title }}</h2>
-        <p>{{ content }}</p>
+        <p class="text-sm">{{ content }}</p>
       </div>
     </header>
     <footer class="flex items-center justify-between">
