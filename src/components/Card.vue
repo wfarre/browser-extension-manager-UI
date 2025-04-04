@@ -32,15 +32,16 @@ const alt = computed(() => `${props.title}'s logo`);
       <label
         :for="'isactive-' + title"
         class="group focus-within:border-toggle-bg relative inline-block h-5 w-9 rounded-full border-2 border-transparent"
-        aria-describedby="Toggle if extension is active"
-        aria-labelledby="toggle"
       >
+        <span class="top">Active:</span>
         <input
           class="h-0 w-0 opacity-0"
           type="checkbox"
           :name="'isactive-' + title"
           :id="'isactive-' + title"
           v-model="model"
+          aria-label="toggle"
+          aria-labelledby="Active"
         />
         <span
           class="bg-cneutral-200 durantion-300 group-has-checked:bg-cred-700 absolute top-0 right-0 bottom-0 left-0 cursor-pointer rounded-full duration-300 before:absolute before:top-0.5 before:left-0.5 before:h-3 before:w-3 before:rounded-full before:bg-white before:duration-300 before:content-[''] group-has-checked:before:translate-x-4"
