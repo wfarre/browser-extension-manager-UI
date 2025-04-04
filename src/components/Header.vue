@@ -2,7 +2,7 @@
   <header
     class="flex justify-between mx-4 lg:mx-32 bg-component-bg p-3 md:p-4 rounded-2xl"
   >
-    <img :src="logo" height="45" alt="extensions" />
+    <img :src="logo" height="45" alt="extensions list logo" />
     <button
       @click="store.toggleDarkTheme"
       class=" bg-btn-bg p-4 rounded-2xl cursor-pointer hover:opacity-60"

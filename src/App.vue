@@ -32,7 +32,7 @@ const filteredExtensions = computed(() => {
       <Header />
       <main class="mx-4 lg:mx-32 mt-9 md:mt-16">
         <Navbar />
-        <section class="mt-9">
+        <section class="mt-9 pb-12">
           <p v-if="error">{{ error }}</p>
           <ul v-if="data" class="relative flex flex-wrap gap-3 justify-between">
             <TransitionGroup>
