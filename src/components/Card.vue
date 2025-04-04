@@ -1,20 +1,12 @@
 <script setup>
 import { computed } from 'vue';
 
+const emits = defineEmits(['remove-item'])
+
 const props = defineProps({title:String, content:String, image:String})
 const model = defineModel()
-
 const imagePath = computed(() => new URL("." + props.image , import.meta.url).href);
-
 const alt = computed(() => `${props.title}'s logo`)
-
-const onChange = (e) => {
-  emit("update-active", props.id )
-  console.log(e.target);
-
-  console.log(e.target.value);
-
-}
 </script>
 
 <template>

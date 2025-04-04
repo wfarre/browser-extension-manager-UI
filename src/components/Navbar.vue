@@ -3,37 +3,36 @@
     <h1 class=" text-3xl font-bold text-text-title">Extensions List</h1>
     <ul class="flex gap-3">
       <li>
-        <button
+        <RouterLink
+          to="/"
           class="px-4.5 py-2.5 bg-btn-bg rounded-3xl capitalize text-text-title cursor-pointer hover:opacity-60"
-          :class="`${currentFilter === 'all' && 'bg-cred-400  not-dark:text-cneutral-0 dark:text-cneutral-900'}`"
-          @click="$emit('setToAll')"
+          activeClass="bg-cred-400  not-dark:text-cneutral-0 dark:text-cneutral-900"
         >
           All
-        </button>
+        </RouterLink>
       </li>
       <li>
-        <button
+        <RouterLink
+          to="/active"
           class="px-4.5 py-2.5 bg-btn-bg rounded-3xl capitalize text-text-title cursor-pointer hover:opacity-60"
-          :class="`${currentFilter === 'active' && 'bg-cred-400 not-dark:text-cneutral-0 dark:text-cneutral-900'}`"
-          @click="$emit('setToActive')"
+          activeClass="bg-cred-400  not-dark:text-cneutral-0 dark:text-cneutral-900"
         >
           Active
-        </button>
+        </RouterLink>
       </li>
       <li>
-        <button
+        <RouterLink
+          to="/inactive"
           class="px-4.5 py-2.5 bg-btn-bg rounded-3xl capitalize text-text-title cursor-pointer hover:opacity-60"
-          :class="`${currentFilter === 'inactive' && 'bg-cred-400  not-dark:text-cneutral-0 dark:text-cneutral-900'}`"
-          @click="$emit('setToInactive')"
+          activeClass="bg-cred-400  not-dark:text-cneutral-0 dark:text-cneutral-900"
         >
           Inactive
-        </button>
+        </RouterLink>
       </li>
     </ul>
   </nav>
 </template>
 
 <script setup>
-const props = defineProps({currentFilter:String})
-const emits = defineEmits(['setToActive', 'setToInactive', 'setToAll'])
+import { RouterLink } from 'vue-router';
 </script>

@@ -4,24 +4,19 @@ import Card from './components/Card.vue';
 import { useFetch } from './hooks/useFetch';
 import Header from './components/Header.vue';
 import Navbar from './components/Navbar.vue';
+import { useTheme } from './store/theme';
+import { useRoute } from 'vue-router';
 
-
-// const isDarkMode = reactive({value:false})
-const isDarkMode = ref(false)
-const currentFilter = ref('all')
+const route = useRoute()
 const {data, error} = useFetch('./data.json')
-
-const toggleDarkMode = () => {
-  isDarkMode.value = !isDarkMode.value
-}
-
+const themeStore = useTheme()
 
 const filteredExtensions = computed(() => {
-  switch (currentFilter.value) {
-    case "active":
-      return data.value.filter(item => item.isActive)
-    case "inactive":
-      return data.value.filter(item => !item.isActive)
+  switch (route.path) {
+    case "/active":
+      return data.value?.filter(item => item.isActive)
+    case "/inactive":
+      return data.value?.filter(item => !item.isActive)
     default:
       return data.value
   }
@@ -31,32 +26,29 @@ const filteredExtensions = computed(() => {
 <template>
   <div
     class="bg-linear-to-b from-bg-start bg-bg-end text-text-main duration-800 transition-all"
-    :class="`${isDarkMode ? 'dark' : ''}`"
+    :class="`${themeStore.isDarkTheme ? 'dark' : ''}`"
   >
     <div class="max-w-[1440px] mx-auto  min-h-[100vh] pt-8">
-      <Header :isDarkMode="isDarkMode" @toggle-dark-mode="toggleDarkMode" />
+      <Header />
       <main class="mx-32 mt-16">
-        <Navbar
-          :currentFilter="currentFilter"
-          @setToAll="()=>currentFilter = 'all'"
-          @setToActive="()=>currentFilter = 'active'"
-          @setToInactive="()=>currentFilter = 'inactive'"
-        />
+        <Navbar />
         <section class="mt-9">
-          <ul class="flex flex-wrap gap-3 justify-between">
-            <li
-              class="w-[32.4%] flex-grow flex-shrink"
-              v-for="(item, index) in filteredExtensions"
-              :key="index"
-            >
-              <Card
-                :title="item.name"
-                :content="item.description"
-                :image="item.logo"
-                v-model="item.isActive"
-                @remove-item="(title) => data = data.filter(item => item.name !== title)"
-              />
-            </li>
+          <ul class="relative flex flex-wrap gap-3 justify-between">
+            <TransitionGroup>
+              <li
+                class="w-[32.4%] flex-grow flex-shrink relative"
+                v-for="(item, index) in filteredExtensions"
+                :key="item.name"
+              >
+                <Card
+                  :title="item.name"
+                  :content="item.description"
+                  :image="item.logo"
+                  v-model="item.isActive"
+                  @remove-item="(title) => data = data.filter(item => item.name !== title)"
+                />
+              </li>
+            </TransitionGroup>
           </ul>
         </section>
       </main>
@@ -64,4 +56,22 @@ const filteredExtensions = computed(() => {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.5s ease;
+}
+
+.v-leave-active, .v-enter-from{
+  position: absolute;
+}
+
+.v-enter-from,
+.v-leave-to {
+  transform: scale(0);
+}
+
+.v-move {
+  transition: transform 0.3s ease;
+}
+</style>
