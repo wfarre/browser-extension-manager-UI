@@ -33,7 +33,7 @@ const alt = computed(() => `${props.title}'s logo`);
         :for="'isactive-' + title"
         class="group focus-within:border-toggle-bg relative inline-block h-5 w-9 rounded-full border-2 border-transparent"
       >
-        <span class="top">Active:</span>
+        <span class="absolute top-0 left-0 scale-0 opacity-0">Active:</span>
         <input
           class="h-0 w-0 opacity-0"
           type="checkbox"
