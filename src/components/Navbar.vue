@@ -1,14 +1,14 @@
 <template>
   <nav
-    class="flex flex-col md:flex-row justify-between flex-wrap gap-6 items-center"
+    class="flex flex-col flex-wrap items-center justify-between gap-6 md:flex-row"
   >
-    <h1 class=" text-3xl font-bold text-text-title">Extensions List</h1>
+    <h1 class="text-text-title text-3xl font-bold">Extensions List</h1>
     <ul class="flex gap-3">
       <li>
         <RouterLink
           to="/"
-          class="px-4.5 py-2.5 bg-btn-bg rounded-3xl capitalize text-text-title cursor-pointer hover:opacity-60"
-          activeClass="bg-cred-400  not-dark:text-cneutral-0 dark:text-cneutral-900"
+          class="bg-btn-bg text-text-title outline-toggle-bg cursor-pointer rounded-3xl px-4.5 py-2.5 capitalize hover:opacity-60"
+          activeClass="dark:bg-cred-400 not-dark:bg-cred-500  not-dark:text-cneutral-0 dark:text-cneutral-900"
         >
           All
         </RouterLink>
@@ -16,8 +16,8 @@
       <li>
         <RouterLink
           to="/active"
-          class="px-4.5 py-2.5 bg-btn-bg rounded-3xl capitalize text-text-title cursor-pointer hover:opacity-60"
-          activeClass="bg-cred-400  not-dark:text-cneutral-0 dark:text-cneutral-900"
+          class="bg-btn-bg text-text-title outline-toggle-bg cursor-pointer rounded-3xl px-4.5 py-2.5 capitalize hover:opacity-60"
+          activeClass="dark:bg-cred-400 not-dark:bg-cred-500  not-dark:text-cneutral-0 dark:text-cneutral-900"
         >
           Active
         </RouterLink>
@@ -25,8 +25,8 @@
       <li>
         <RouterLink
           to="/inactive"
-          class="px-4.5 py-2.5 bg-btn-bg rounded-3xl capitalize text-text-title cursor-pointer hover:opacity-60"
-          activeClass="bg-cred-400  not-dark:text-cneutral-0 dark:text-cneutral-900"
+          class="bg-btn-bg text-text-title outline-toggle-bg cursor-pointer rounded-3xl px-4.5 py-2.5 capitalize hover:opacity-60"
+          activeClass="dark:bg-cred-400 not-dark:bg-cred-500  not-dark:text-cneutral-0 dark:text-cneutral-900"
         >
           Inactive
         </RouterLink>
@@ -36,5 +36,5 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router';
+import { RouterLink } from "vue-router";
 </script>
