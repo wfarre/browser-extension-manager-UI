@@ -18,9 +18,6 @@ import { computed } from "vue"
 const props = defineProps({
     isDarkMode: {value: Boolean}
 })
-
-
-const buttonImage = computed(() => {
-  return props.isDarkMode.value ? iconSun : iconMoon })
+const buttonImage = computed(() => props.isDarkMode ? iconSun : iconMoon )
 const buttonImageAlt = computed(() => props.isDarkMode.value ? "light mode": "dark mode")
 </script>

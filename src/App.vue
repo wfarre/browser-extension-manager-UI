@@ -6,7 +6,8 @@ import Header from './components/Header.vue';
 import Navbar from './components/Navbar.vue';
 
 
-const isDarkMode = reactive({value:false})
+// const isDarkMode = reactive({value:false})
+const isDarkMode = ref(false)
 const currentFilter = ref('all')
 const {data, error} = useFetch('./data.json')
 
@@ -30,7 +31,7 @@ const filteredExtensions = computed(() => {
 <template>
   <div
     class="bg-linear-to-b from-bg-start bg-bg-end text-text-main duration-800 transition-all"
-    :class="`${isDarkMode.value ? 'dark' : ''}`"
+    :class="`${isDarkMode ? 'dark' : ''}`"
   >
     <div class="max-w-[1440px] mx-auto  min-h-[100vh] pt-8">
       <Header :isDarkMode="isDarkMode" @toggle-dark-mode="toggleDarkMode" />
