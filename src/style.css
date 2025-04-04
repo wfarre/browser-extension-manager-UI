@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -27,6 +28,8 @@
   --color-text-title: hsl(227, 75%, 14%);
   --color-btn-bg: hsl(200, 60%, 99%);
   --color-toggle-bg: hsl(3, 77%, 44%);
+
+  --font-main: "Noto Sans", sans-serif;
 }
 
 .dark {

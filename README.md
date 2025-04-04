@@ -1,5 +1,35 @@
-# Vue 3 + Vite
+# BROWSER EXTENSION LIST UI
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## The project
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+This a project designed by frontend mentor.
+
+## The stack
+
+- HTML
+- CSS
+- JavascriptJ'espe
+- TailwindCSS
+- Vue 3
+- Vue-Router 4
+- Pinia
+
+## Installation
+
+```
+npm install
+```
+
+or
+
+```
+npm i
+```
+
+To launch the app on a local server:
+
+```
+npm run dev
+```
+
+It will be served on http://localhost:5173/ .

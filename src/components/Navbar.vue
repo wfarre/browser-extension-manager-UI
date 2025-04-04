@@ -1,5 +1,7 @@
 <template>
-  <nav class="flex justify-between">
+  <nav
+    class="flex flex-col md:flex-row justify-between flex-wrap gap-6 items-center"
+  >
     <h1 class=" text-3xl font-bold text-text-title">Extensions List</h1>
     <ul class="flex gap-3">
       <li>

@@ -11,7 +11,7 @@ const alt = computed(() => `${props.title}'s logo`)
 
 <template>
   <article
-    class=" p-4.5 border border-cneutral-300 rounded-3xl h-full flex flex-col justify-between bg-component-bg"
+    class=" p-4.5 border border-cneutral-300 rounded-3xl h-full flex flex-col justify-between bg-component-bg gap-11"
   >
     <header class="flex items-start gap-4">
       <img :src="imagePath" :alt="alt" />

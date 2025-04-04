@@ -25,18 +25,19 @@ const filteredExtensions = computed(() => {
 
 <template>
   <div
-    class="bg-linear-to-b from-bg-start bg-bg-end text-text-main duration-800 transition-all"
+    class="bg-linear-to-b from-bg-start bg-bg-end text-text-main duration-800 transition-all font-main"
     :class="`${themeStore.isDarkTheme ? 'dark' : ''}`"
   >
     <div class="max-w-[1440px] mx-auto  min-h-[100vh] pt-8">
       <Header />
-      <main class="mx-32 mt-16">
+      <main class="mx-4 lg:mx-32 mt-9 md:mt-16">
         <Navbar />
         <section class="mt-9">
-          <ul class="relative flex flex-wrap gap-3 justify-between">
+          <p v-if="error">{{ error }}</p>
+          <ul v-if="data" class="relative flex flex-wrap gap-3 justify-between">
             <TransitionGroup>
               <li
-                class="w-[32.4%] flex-grow flex-shrink relative"
+                class="md:w-[32.4%] flex-grow flex-shrink relative"
                 v-for="(item, index) in filteredExtensions"
                 :key="item.name"
               >
