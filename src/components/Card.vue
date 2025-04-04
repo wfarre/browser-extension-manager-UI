@@ -16,7 +16,7 @@ const alt = computed(() => `${props.title}'s logo`);
     class="border-cneutral-300 bg-component-bg flex h-full flex-col justify-between gap-11 rounded-3xl border p-4.5"
   >
     <header class="flex items-start gap-4">
-      <img :src="imagePath" :alt="alt" lazy />
+      <img :src="imagePath" height="60" width="60" :alt="alt" lazy />
       <div>
         <h2 class="text-text-title mb-3 text-xl font-bold">{{ title }}</h2>
         <p>{{ content }}</p>
