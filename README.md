@@ -33,3 +33,7 @@ npm run dev
 ```
 
 It will be served on http://localhost:5173/ .
+
+## Performance
+
+<img src="./src/assets/perfomance-desktop.png" />
