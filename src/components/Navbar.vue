@@ -2,7 +2,9 @@
   <nav
     class="flex flex-col flex-wrap items-center justify-between gap-6 md:flex-row"
   >
-    <h1 class="text-text-title text-3xl font-bold">Extensions List</h1>
+    <h1 class="text-text-title font-main text-3xl font-bold">
+      Extensions List
+    </h1>
     <ul class="flex gap-3">
       <li>
         <RouterLink
