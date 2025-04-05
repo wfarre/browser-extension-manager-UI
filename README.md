@@ -36,4 +36,10 @@ It will be served on http://localhost:5173/ .
 
 ## Performance
 
-<img src="./src/assets/perfomance-desktop.png" />
+### Desktop Performance
+
+<img src="./src/assets/performance-desktop.png" />
+
+### Mobile Performance
+
+<img src="./src/assets/performance-mobile.png" />
