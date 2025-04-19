@@ -29,7 +29,7 @@ const filteredExtensions = computed(() => {
     :class="`${themeStore.isDarkTheme ? 'dark' : ''}`"
   >
     <div class="mx-auto min-h-[100vh] max-w-[1440px] pt-8">
-      <Header />
+      <Header></Header>
       <main class="mx-4 mt-9 md:mt-16 lg:mx-32">
         <Navbar />
         <section class="mt-9 pb-12">

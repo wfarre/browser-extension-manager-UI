@@ -24,6 +24,7 @@ const alt = computed(() => `${props.title}'s logo`);
     </header>
     <footer class="flex items-center justify-between">
       <button
+        aria-label="delete-btn"
         class="border-cneutral-300 hover:bg-cred-400 outline-toggle-bg cursor-pointer rounded-full border px-4 py-3 duration-300 not-dark:hover:text-white"
         @click="$emit('remove-item', title)"
       >

@@ -10,6 +10,7 @@
       alt="extensions list logo"
     />
     <button
+      aria-label="toggle-btn"
       @click="store.toggleDarkTheme"
       class="bg-btn-bg outline-toggle-bg cursor-pointer rounded-2xl p-4 hover:opacity-60"
     >
